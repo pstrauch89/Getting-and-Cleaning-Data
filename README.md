@@ -1,3 +1,1 @@
-# Getting-and-Cleaning-Data
-Course project
-g
+tu bude popis kodu
