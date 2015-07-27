@@ -27,15 +27,12 @@ http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Datas
 * The activities of training and test data set are merged to `activity`.
 * The features of training and test data sete merged to `features`.
 
-* The name of the features are set in `features` from `featureNames`.
-* `features`, `activity` and `subject` are merged to form `completeData`.
-* Indices of columns that contain std or mean, activity and subject are taken into `requiredColumns` .
-* `extractedData` is created with data from columns in `requiredColumns`.
-* `Activity` column in `extractedData` is updated with descriptive names of activities taken from `activityLabels`. `Activity` column is expressed as a factor variable.
-* Acronyms in variable names in `extractedData`, like 'Acc', 'Gyro', 'Mag', 't' and 'f' are replaced with descriptive labels such as 'Accelerometer', 'Gyroscpoe', 'Magnitude', 'Time' and 'Frequency'.
-* `tidyData` is created as a set with average for each activity and subject of `extractedData`. Entries in `tidyData` are ordered based on activity and subject.
-* Finally, the data in `tidyData` is written into `Tidy.txt`.
+* The name of the features are set into `features` from `featureNames`.
+* `features`, `activity` and `subject` are merged to data frame `oneDataSet`.
+* Activity, subject and columns that contain std or mean are taken into `meanAndSdColumns` .
+* `extractedDataSet` is created with data from columns in `meanAndSdColumns`.
+* `Activity` column in `extractedDataSet` is updated with descriptive names of activities taken from `activityNames`.
+* Acronyms in variable names of `extractedDataSet` are replaced with descriptive labels (e.g. 'Acc', 'Gyro', 'Mag', 't' and 'f' are replaced to 'Accelerometer', 'Gyroscpoe', 'Magnitude', 'Time' and 'Frequency').
+* `tidyDataSet` is created as a data set with average for each activity and subject of `extractedDataSet`. Entries in this data set are ordered based on activity and subject.
 
-##Output Data Set
-
-The output data `Tidy.txt` is a a space-delimited value file. The header line contains the names of the variables. It contains the mean and standard deviation values of the data contained in the input files. The header is restructued in an understandable manner. 
+* The data from  `TidyDataSet` is written into `TidyDataSet.txt`. This output is a space-delimited value file. The header line contains the names of the variables.
